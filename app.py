@@ -2,12 +2,14 @@ import streamlit as st
 import pickle
 import re
 import string
+import joblib
+
+model = joblib.load("model.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 
 # -------------------------
 # Load saved model
 # -------------------------
-model = pickle.load(open("model.pkl", "rb"))
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 
 
